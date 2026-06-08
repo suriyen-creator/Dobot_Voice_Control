@@ -76,7 +76,7 @@ The system dynamically condenses speech down to its structural roots. The table 
 To verify your local hardware and AI model configuration are sound, run the standalone diagnostic tool:
 
 ```bash
-python test_ai.py
+python test_faster_whisper.py
 
 ```
 
