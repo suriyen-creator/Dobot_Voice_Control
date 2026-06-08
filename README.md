@@ -25,7 +25,7 @@ The repository is organized into distinct functional modules:
 | --- | --- |
 | `voice_control.py` | The main execution engine. It manages the audio recording loop, applies the 3-Tier intent processing logic, and streams serial coordinates directly to the Dobot hardware. |
 | `NLP.py` | The speech processing hub. It initializes the Whisper model globally into memory upon launch to eliminate recurring runtime reload delays. |
-| `test_ai.py` | A diagnostic testing script used to isolate and verify local Whisper model loading and microphone sound-stage capture. |
+| `test_faster_whisper.py` | A diagnostic testing script used to isolate and verify local Whisper model loading and microphone sound-stage capture. |
 | `requirements.txt` | Centralized python dependency manifest for reproducible environments. |
 
 ---
