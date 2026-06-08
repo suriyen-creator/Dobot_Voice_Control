@@ -1,0 +1,5 @@
+# .gitignore
+record.wav
+__pycache__/
+*.pyc
+.env
