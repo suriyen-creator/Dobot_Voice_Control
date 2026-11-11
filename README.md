@@ -1,10 +1,18 @@
-# 🎙️ Smart AI Voice Control System for Dobot Robotic Arm (V4 - High Accuracy)
+# Smart AI Voice Control System for Dobot Robotic Arm (V4 - High Accuracy)
+
+## Screenshots
+
+![Dobot_Voice_Control screenshot 1](/home/bestz/Projects/Dobot_Voice_Control/screenshot/IMG_1806.gif)
+
+![Dobot_Voice_Control screenshot 2](/home/bestz/Projects/Dobot_Voice_Control/screenshot/IMG_1807.jpg)
+
+![Dobot_Voice_Control screenshot 3](/home/bestz/Projects/Dobot_Voice_Control/screenshot/image2.jpg)
 
 A lightweight, robust, and offline voice-controlled automation pipeline for the **Dobot** robotic arm. This system bypasses bloated, hardcoded dictionary mappings by combining local state-of-the-art neural speech recognition (**Faster-Whisper**) with a dynamic **3-Tier Intent Matching** algorithm.
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 * **Offline Neural Speech-to-Text:** Powered by `faster-whisper`, running locally on your CPU using quantized `int8` weights for fast, low-latency, and internet-free transcriptions.
 * **3-Tier Intent Resolver:** A multi-layered text matching algorithm that filters noise and ensures the robot never acts on ambiguous audio cues:
@@ -17,7 +25,7 @@ A lightweight, robust, and offline voice-controlled automation pipeline for the 
 
 ---
 
-## 📂 Project Architecture
+## Project Architecture
 
 The repository is organized into distinct functional modules:
 
@@ -30,7 +38,7 @@ The repository is organized into distinct functional modules:
 
 ---
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### 1. Prerequisites
 
@@ -45,11 +53,11 @@ pip install -r requirements.txt
 
 ```
 
-> ⚠️ **Note for Windows Users:** If `sounddevice` or `pydobot` throws serial communication blockages, ensure your hardware COM port matches the config variable (`PORT = "COM3"`) defined in `voice_control.py`.
+>  **Note for Windows Users:** If `sounddevice` or `pydobot` throws serial communication blockages, ensure your hardware COM port matches the config variable (`PORT = "COM3"`) defined in `voice_control.py`.
 
 ---
 
-## 🤖 Command Registry Matrix
+## Command Registry Matrix
 
 The system dynamically condenses speech down to its structural roots. The table below represents the core dictionary footprint mapped directly into robotic actions:
 
@@ -69,7 +77,7 @@ The system dynamically condenses speech down to its structural roots. The table 
 
 ---
 
-## 💻 How to Run
+## How to Run
 
 ### Step 1: Run Diagnostics (Optional)
 
@@ -98,7 +106,7 @@ python voice_control.py
 
 ---
 
-## 🧠 Algorithmic Insight: Intent Parsing Pipeline
+## Algorithmic Insight: Intent Parsing Pipeline
 
 ```
 [Voice Input] -> (Captured WAV) -> [Whisper Neural Model] -> (Raw Text String)
@@ -116,4 +124,4 @@ python voice_control.py
 
 ```
 
-> 💡 **Why this is resilient:** If the Whisper model accidentally transcribes the word `"right"` as `"write"`, the **Fuzzy Ratio Layer** will evaluate the proximity between the characters, note that the prefix length matches, calculate a high confidence match score, and flawlessly map it to the **`right`** movement block anyway—all without needing manual mapping bloat.
+>  **Why this is resilient:** If the Whisper model accidentally transcribes the word `"right"` as `"write"`, the **Fuzzy Ratio Layer** will evaluate the proximity between the characters, note that the prefix length matches, calculate a high confidence match score, and flawlessly map it to the **`right`** movement block anyway—all without needing manual mapping bloat.
