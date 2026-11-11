@@ -2,11 +2,11 @@
 
 ## Screenshots
 
-![Dobot_Voice_Control screenshot 1](/home/bestz/Projects/Dobot_Voice_Control/screenshot/IMG_1806.gif)
+<p align="center"><img src="screenshot/IMG_1806.gif" alt="Dobot_Voice_Control screenshot 1" width="100%"></p>
 
-![Dobot_Voice_Control screenshot 2](/home/bestz/Projects/Dobot_Voice_Control/screenshot/IMG_1807.jpg)
+<p align="center"><img src="screenshot/IMG_1807.jpg" alt="Dobot_Voice_Control screenshot 2" width="100%"></p>
 
-![Dobot_Voice_Control screenshot 3](/home/bestz/Projects/Dobot_Voice_Control/screenshot/image2.jpg)
+<p align="center"><img src="screenshot/image2.jpg" alt="Dobot_Voice_Control screenshot 3" width="100%"></p>
 
 A lightweight, robust, and offline voice-controlled automation pipeline for the **Dobot** robotic arm. This system bypasses bloated, hardcoded dictionary mappings by combining local state-of-the-art neural speech recognition (**Faster-Whisper**) with a dynamic **3-Tier Intent Matching** algorithm.
 
